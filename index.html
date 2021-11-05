@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JS</title>
+</head>
+
+<body>
+    <div id="greet">
+        <h1>Hello</h1>
+    </div>
+    <p>Hello</p>
+
+    <!-- element -->
+    <!-- <input type="text" value="thẻ không cần lấy" class="website" />
+    <div>
+        <input type="text" value="Thẻ Cần Lấy" class="website elele" />
+        <input type="text" value="thẻ không cần lấy" />
+    </div> -->
+
+    <script language="javascript">
+        // Tạo mới một thẻ p
+        var p = document.createElement("p");
+        // Thêm nội dung HTML vào thẻ p
+        p.innerHTML = "SIMS Tech - Hiện đại nhưng đơn giản <3"
+
+
+        // TextNode
+        // var text = document.createTextNode("Học lập trình tại SIMS Tech");
+
+        // Đưa thẻ P vào trong thẻ body
+        document.getElementsByTagName('body')[0].appendChild(p);
+
+        //querySelector
+        // var element = document.querySelectorAll("div input.website");
+        // console.log(element);
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

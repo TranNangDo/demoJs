@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#" onclick="return openWindow()">Open</a>
+    <a href="#" onclick="return closeWindow()">Close</a>
+    <script language="javascript">
+        // Lấy kích thước
+        // Đối với Internet Explorer, Chrome, Firefox, Opera, và Safari
+        // var heightBrowser = window.innerHeight;
+        // var widthBrowser = window.innerWidth;
+        // Đối với Internet Explorer các version 5,6,7,8
+        // var height = document.documentElement.clientHeight;
+        // hoặc
+        // var height = document.body.clientHeight;
+        // var width = document.documentElement.clientWidth;
+        // hoặc
+        // var width = document.body.clientWidth;
+
+        // cách 2
+        // var width = window.innerWidth ||
+        //     document.documentElement.clientWidth ||
+        //     document.body.clientWidth;
+
+        // var height = window.innerHeight ||
+        //     document.documentElement.clientHeight ||
+        //     document.body.clientHeight;
+        // console.log(width);
+
+        // openVSclose
+        var windowChild = null;
+
+        function openWindow() {
+            windowChild = window.open('https://simstech.vn/', "windowChild", "width=1000, height=500");
+            return false;
+        }
+
+        function closeWindow() {
+            windowChild.close()
+            return false;
+        }
+        // Location
+        document.write("href:" + window.location.href + "<br/>");
+        // history
+        alert("Tổng số trang đã lưu trong history là: " + window.history.length);
+    </script>
+</body>
+
+</html>
